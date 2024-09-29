@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family: "Poppins", sans-serif;
+}
+/* create a animation which loops and changes left=0 to left=20 */
+.animate-move {
+    animation: move 1s infinite;
+}
+@keyframes move {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 20px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes rotate{
+    0%{
+        rotate:0deg;
+    }
+    100%{
+        rotate:360deg;
+    }
+}
+.animate-rotate-custom {
+    animation: rotate 200s infinite;
+}
+
+.noScrollbars::-webkit-scrollbar {
+    display: none;
+}
+.genreItem{
+    position: absolute;
+    height: 16px;
+    text-align: "left";
+    cursor: "pointer";
+    transition: "0.3s";
+    font-size: 4;
+    font-family: "Roobert";
+    line-height: 16;
+    background-color: "transparent";
+    z-index: 1;
+    display: "flex";
+    align-items: "center";
+    justify-content: "center";
+}
+.genreItem:hover{
+    background-color: attr(data-color);
+    border-radius: 8px;
+    color: "white";
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
